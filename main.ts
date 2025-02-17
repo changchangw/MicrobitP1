@@ -1,7 +1,7 @@
+let xAccel = 0
 serial.redirectToUSB()
-
 basic.forever(function () {
-    let xAccel = input.acceleration(Dimension.X) 
-    serial.writeLine("" + xAccel) 
-    basic.pause(100) 
+    xAccel = input.acceleration(Dimension.X)
+    serial.writeLine("" + (xAccel))
+    basic.pause(50)
 })
